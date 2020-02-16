@@ -1,11 +1,11 @@
 <template>
   <q-page class="flex flex-center">
-    <img alt="Jimenez Tax logo" src="~assets/jimenez-logo.svg" />
+    <h1>Contact Us</h1>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: "PageIndex"
+  name: "Contact Us"
 };
 </script>

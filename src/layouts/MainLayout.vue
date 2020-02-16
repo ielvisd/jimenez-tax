@@ -1,37 +1,66 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="hHh lpR fFf">
+    <q-header class="bg-secondary" elevated>
       <q-toolbar>
         <q-btn
+          class="absolute-right text-accent"
           flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          icon="menu"
-          aria-label="Menu"
+          icon="meeting_room"
+          label="Make an appointment"
+          to="/appointments"
         />
+        <!-- <q-btn
+          @click="logoutUser"
+          v-else
+          class="absolute-right"
+          flat
+          icon="account_circle"
+          label="Logout"
+        />-->
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title class="absolute-center">Leo Jimenez & Associates</q-toolbar-title>
       </q-toolbar>
     </q-header>
 
+    <q-footer class="bg-secondary">
+      <q-tabs>
+        <q-route-tab
+          v-for="nav in navs"
+          class="nav"
+          nav.label
+          :key="nav.label"
+          :to="nav.to"
+          :icon="nav.icon"
+          :label="nav.label"
+        />
+      </q-tabs>
+    </q-footer>
+
     <q-drawer
+      :breakpoint="767"
+      :width="250"
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-grey-1"
+      content-class="bg-secondary"
     >
-      <q-list>
-        <q-item-label header class="text-grey-8">Essential Links</q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+      <q-list dark>
+        <q-item-label class="text-accent" header>Navigation</q-item-label>
+        <q-item
+          class="text-accent"
+          v-for="nav in navs"
+          clickable
+          exact
+          :to="nav.to"
+          :key="nav.label"
+        >
+          <q-item-section avatar>
+            <q-icon :name="nav.icon" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>{{ nav.label }}</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
@@ -42,57 +71,73 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink'
-
 export default {
-  name: 'MainLayout',
+  name: "MainLayout",
 
-  components: {
-    EssentialLink
-  },
+  components: {},
 
-  data () {
+  data() {
     return {
       leftDrawerOpen: false,
-      essentialLinks: [
+      navs: [
         {
-          title: 'Docs',
-          caption: 'quasar.dev',
-          icon: 'school',
-          link: 'https://quasar.dev'
+          label: "Home",
+          icon: "house",
+          to: "/"
         },
         {
-          title: 'Github',
-          caption: 'github.com/quasarframework',
-          icon: 'code',
-          link: 'https://github.com/quasarframework'
+          label: "Services",
+          icon: "card_travel",
+          to: "/services"
         },
         {
-          title: 'Discord Chat Channel',
-          caption: 'chat.quasar.dev',
-          icon: 'chat',
-          link: 'https://chat.quasar.dev'
+          label: "About Us",
+          icon: "nature_people",
+          to: "/about"
         },
         {
-          title: 'Forum',
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev'
+          label: "Make an Appointment",
+          icon: "meeting_room",
+          to: "/appointments"
         },
         {
-          title: 'Twitter',
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev'
-        },
-        {
-          title: 'Facebook',
-          caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev'
+          label: "Contact Us",
+          icon: "contact_support",
+          to: "/contact"
         }
       ]
-    }
+    };
+  }
+};
+</script>
+
+<style lang="scss">
+.q-tab[aria-selected="true"] {
+  .q-toolbar__title,
+  .q-tab__label,
+  .q-tab__icon,
+  .q-tab__indicator {
+    color: #512b58;
   }
 }
-</script>
+
+.q-toolbar__title {
+  color: #512b58;
+}
+
+@media screen and (min-width: 768px) {
+  .q-footer {
+    display: none;
+  }
+}
+
+.q-drawer {
+  .q-router-link--exact-active {
+    color: #512b58 !important;
+  }
+}
+
+body {
+  font-family: "IBMPlexSerif-Regular";
+}
+</style>
