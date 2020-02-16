@@ -96,6 +96,11 @@ export default {
           to: "/about"
         },
         {
+          label: "Blog",
+          icon: "library_books",
+          to: "/blog"
+        },
+        {
           label: "Make an Appointment",
           icon: "meeting_room",
           to: "/appointments"

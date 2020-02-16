@@ -3,7 +3,7 @@
     <div class="bg-primary q-pa-md absolute full-width full-height column">
       <div class="winherit">
         <div class="row auto-24btm">
-          <p class="text-accent text-h6 text-bold mauto">About Us</p>
+          <p class="text-accent text-h6 text-bold mauto">Blog</p>
         </div>
         <div class="row auto-24btm">
           <q-img

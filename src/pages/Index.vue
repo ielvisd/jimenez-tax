@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div class="bg-primary q-pa-md absolute full-width full-height column">
-      <div class="flex-column">
+      <div>
         <div class="row auto-24btm test">
           <img class="test" alt="Jimenez Tax logo" src="~assets/jimenez-logo.svg" />
         </div>
@@ -14,7 +14,8 @@
           />
         </div>
       </div>
-      <div class="q-gutter-md">
+
+      <div class="q-gutter-md q-mb-md">
         <q-carousel
           v-model="slide"
           transition-prev="scale"
@@ -29,10 +30,10 @@
           class="bg-secondary text-accent shadow-1 rounded-borders"
         >
           <q-carousel-slide name="style" class="column no-wrap flex-center">
-            <p>Services</p>
+            <p class="text-subtitle1 text-bold">Services</p>
             <q-icon name="style" size="56px" />
             <div class="q-mt-md text-center">
-              <p>Tax Preparation</p>
+              <p class="text-bold">Tax Preparation</p>
               {{ lorem }}
             </div>
           </q-carousel-slide>
@@ -53,11 +54,43 @@
             </div>
           </q-carousel-slide>
         </q-carousel>
-
-        <q-card class="my-card">
-          <q-card-section>{{ footer }}</q-card-section>
-        </q-card>
       </div>
+
+      <q-card class="bg-accent row q-mb-md">
+        <!-- <q-card-section class="flex flex-column">
+          <div>
+            <p class="text-secondary">Leo Jimenez & Associates</p>
+            <p class="text-secondary">2514 Sunset Blvd. Los Angeles, CA 90026</p>
+            <p class="text-secondary">Tel: (213)-413-3313</p>
+            <p class="text-secondary">Fax: (213)-413-5006</p>
+            <p class="text-secondary">Email: jimtax@sbcglobal.net</p>
+          </div>
+          <div>
+            <q-img class="rounded-borders" src="https://cdn.quasar.dev/img/parallax2.jpg" />
+          </div>
+        </q-card-section>-->
+        <!-- <q-card-section class="col-5 flex flex-center">
+          <q-img class="rounded-borders" src="https://cdn.quasar.dev/img/parallax2.jpg" />
+        </q-card-section>-->
+        <q-card-section horizontal>
+          <q-card-section class="q-pt-xs">
+            <div class="text-overline text-primary">Visit Us!</div>
+            <div class="text-h5 q-mt-sm q-mb-xs text-primary">Leo Jimenez & Associates</div>
+            <div class="text-caption text-primary">
+              <p>
+                2514 Sunset Blvd. Los Angeles, CA 90026
+                <br />Tel: (213)-413-3313
+                <br />Fax: (213)-413-5006
+                <br />Email: jimtax@sbcglobal.net
+              </p>
+            </div>
+          </q-card-section>
+        </q-card-section>
+      </q-card>
+
+      <q-card class="bg-primary">
+        <q-card-section>{{ footer }}</q-card-section>
+      </q-card>
     </div>
   </q-page>
 </template>
@@ -67,8 +100,9 @@ export default {
   name: "PageIndex",
   data() {
     return {
-      url: "../statics/home-image.jpg",
+      url: "../statics/lion.jpg",
       slide: "style",
+      address: "Leo Jimenez & Associates </br>oijoj",
       footer: "Copyright © 2020 Leo Jimenez & Associates. All rights reserved.",
       lorem:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo."
@@ -85,6 +119,14 @@ export default {
 
 .auto-24btm {
   margin: 0 auto 24px auto;
+}
+
+.bsr {
+  border: solid red;
+}
+
+.bsg {
+  border: solid green;
 }
 </style>
 

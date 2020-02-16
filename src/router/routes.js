@@ -17,7 +17,8 @@ const routes = [
         path: "/appointments",
         component: () => import("pages/Appointments.vue")
       },
-      { path: "/contact", component: () => import("pages/Contact.vue") }
+      { path: "/contact", component: () => import("pages/Contact.vue") },
+      { path: "/blog", component: () => import("pages/Blog.vue") }
     ]
   }
 ];
