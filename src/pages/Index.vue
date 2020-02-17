@@ -128,6 +128,7 @@ export default {
 
 .test {
   width: fit-content;
+  max-width: 275px;
 }
 
 .auto-24btm {

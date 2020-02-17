@@ -2,13 +2,7 @@
   <q-layout view="hHh lpR fFf">
     <q-header class="bg-secondary" elevated>
       <q-toolbar>
-        <q-btn
-          @click="showDrift"
-          class="absolute-right text-accent"
-          flat
-          icon="meeting_room"
-          label="Appointments"
-        />
+        <q-btn @click="showDrift" class="absolute-right text-accent" flat icon="chat" />
         <!-- <q-btn
           @click="logoutUser"
           v-else
