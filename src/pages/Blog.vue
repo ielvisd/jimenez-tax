@@ -181,6 +181,7 @@ export default {
   max-width: 350px;
   min-width: 200px;
   margin-right: 24px;
+  margin-bottom: 24px;
   // border: solid green;
   // height: 100%;
   max-height: 500px;
@@ -208,6 +209,9 @@ export default {
 
 .flex-row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .categories {
