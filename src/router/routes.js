@@ -18,7 +18,26 @@ const routes = [
         component: () => import("pages/Appointments.vue")
       },
       { path: "/contact", component: () => import("pages/Contact.vue") },
-      { path: "/blog", component: () => import("pages/Blog.vue") }
+      {
+        path: "/blog",
+        component: () => import("pages/Blog.vue"),
+        children: [
+          {
+            path: "/taco",
+            component: () => import("pages/Contact.vue")
+          }
+        ]
+      },
+      {
+        path: "blogPost",
+        component: () => import("layouts/PostLayout.vue"),
+        children: [
+          {
+            path: ":post",
+            component: () => import("pages/Post.vue")
+          }
+        ]
+      }
     ]
   }
 ];
