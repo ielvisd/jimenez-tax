@@ -9,7 +9,7 @@
             </div>
             <div class="row auto-24btm">
               <q-img
-                class="auto-24btm"
+                class="auto"
                 :src="url"
                 spinner-color="white"
                 style="height: auto; max-width: 350px"
@@ -17,7 +17,36 @@
             </div>
           </div>
 
-          <div class="q-gutter-md q-mb-md">
+          <div class="q-gutter-md q-mb-md flex auto flex-center auto-24btm">
+            <q-card class="my-card bg-accent" flat bordered>
+              <q-card-section horizontal>
+                <q-card-section class="q-pt-xs">
+                  <div class="text-h5 q-mt-sm q-mb-xs text-secondary text-center">Specialties</div>
+                  <p
+                    class="text-caption text-secondary"
+                  >Jimenez Tax is a family business that has 6 Licensed Tax Professionals who have passed a rigorous test & background check administered by the IRS. We specialize in the tax needs of individuals and small businesses. We use our knowledge of federal, state, and al tax codes and publications to prepare tax returns and make sure our clients do not pay unnecessary taxes. We also offer advise to taxpayers in audits, investigations, and other tax related situations. Jimenez tax also offers notary, real estate, bookkeeping, and living trusts.</p>
+                </q-card-section>
+              </q-card-section>
+
+              <q-separator />
+            </q-card>
+
+            <q-card class="my-card bg-accent" flat bordered>
+              <q-card-section horizontal>
+                <q-card-section class="q-pt-xs">
+                  <div class="text-h5 q-mt-sm q-mb-xs text-secondary text-center">History</div>
+                  <p class="text-caption text-secondary">
+                    Established in 1965.
+                    Jimenez Tax is a family business that was established in 1965. It started off with a family of brothers that worked out of this office until they branched off to start their own tax business. However, this office still keeps the tradition going with it's staff.
+                  </p>
+                </q-card-section>
+              </q-card-section>
+
+              <q-separator />
+            </q-card>
+          </div>
+
+          <div class="q-mb-md">
             <q-carousel
               v-model="slide"
               transition-prev="scale"
@@ -107,7 +136,7 @@ export default {
   name: "PageIndex",
   data() {
     return {
-      url: "../statics/lion.jpg",
+      url: "../statics/leotaxsign.jpg",
       slide: "style",
       address: "Leo Jimenez & Associates </br>oijoj",
       footer: "Copyright © 2020 Leo Jimenez & Associates. All rights reserved.",
@@ -141,6 +170,39 @@ export default {
 
 .bsg {
   border: solid green;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.my-card {
+  width: 100%;
+  max-width: 350px;
+}
+
+.p-bottom-24 {
+  padding-bottom: 24px;
+}
+
+.avatar-pic {
+  // border: solid red;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  border-radius: 100%;
+}
+
+.my-card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 300px;
 }
 </style>
 

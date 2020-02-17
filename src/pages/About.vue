@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <div class="bg-primary q-pa-md absolute full-width full-height flex-column">
+    <p class="bg-primary q-pa-md absolute full-width full-height flex-column">
       <template>
         <q-scroll-area class="home">
           <div class="full-width">
@@ -17,6 +17,37 @@
               <h4 class="auto text-accent">About Us</h4>
             </div>
           </div>
+
+          <div class="q-gutter-md q-mb-md flex auto flex-center auto-24btm">
+            <q-card class="my-card bg-accent" flat bordered>
+              <q-card-section horizontal>
+                <q-card-section class="q-pt-xs">
+                  <div class="text-h5 q-mt-sm q-mb-xs text-secondary text-center">Specialties</div>
+                  <p
+                    class="text-caption text-secondary"
+                  >Jimenez Tax is a family business that has 6 Licensed Tax Professionals who have passed a rigorous test & background check administered by the IRS. We specialize in the tax needs of individuals and small businesses. We use our knowledge of federal, state, and al tax codes and publications to prepare tax returns and make sure our clients do not pay unnecessary taxes. We also offer advise to taxpayers in audits, investigations, and other tax related situations. Jimenez tax also offers notary, real estate, bookkeeping, and living trusts.</p>
+                </q-card-section>
+              </q-card-section>
+
+              <q-separator />
+            </q-card>
+
+            <q-card class="my-card bg-accent" flat bordered>
+              <q-card-section horizontal>
+                <q-card-section class="q-pt-xs">
+                  <div class="text-h5 q-mt-sm q-mb-xs text-secondary text-center">History</div>
+                  <p class="text-caption text-secondary">
+                    Established in 1965.
+                    Jimenez Tax is a family business that was established in 1965. It started off with a family of brothers that worked out of this office until they branched off to start their own tax business. However, this office still keeps the tradition going with it's staff.
+                  </p>
+                </q-card-section>
+              </q-card-section>
+
+              <q-separator />
+            </q-card>
+          </div>
+
+          <h4 class="auto text-accent text-center">Meet the Team</h4>
 
           <div class="q-gutter-md q-mb-md flex auto flex-center p-bottom-24">
             <q-card class="my-card bg-secondary" flat bordered>
@@ -270,7 +301,7 @@
           </q-card>
         </q-scroll-area>
       </template>
-    </div>
+    </p>
 
     <q-dialog v-model="alert">
       <q-card>
@@ -396,6 +427,10 @@ export default {
   }
 }
 
+.auto-24btm {
+  margin: 0 auto 24px auto;
+}
+
 .card {
   max-width: 350px;
   min-height: 185px;
@@ -459,6 +494,12 @@ export default {
   height: 100px;
   margin: 0 10px;
   border-radius: 100%;
+}
+
+.my-card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 300px;
 }
 </style>
 

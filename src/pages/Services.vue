@@ -53,7 +53,7 @@
                 </q-card-section>
 
                 <q-card-section class="col-5 flex-center">
-                  <q-img class="rounded-borders" src="https://cdn.quasar.dev/img/parallax2.jpg" />
+                  <q-img class="rounded-borders" :src="notaryURL" />
                 </q-card-section>
               </q-card-section>
 
@@ -76,7 +76,7 @@
                 </q-card-section>
 
                 <q-card-section class="col-5 flex flex-center">
-                  <q-img class="rounded-borders" src="https://cdn.quasar.dev/img/parallax2.jpg" />
+                  <q-img class="rounded-borders" :src="livingURL" />
                 </q-card-section>
               </q-card-section>
 
@@ -164,6 +164,8 @@ export default {
       alert: false,
 
       url: "../statics/services.jpg",
+      notaryURL: "../statics/stamp.jpg",
+      livingURL: "../statics/livingtrust.jpg",
       slide: "style",
       address: "Leo Jimenez & Associates </br>oijoj",
       footer: "Copyright © 2020 Leo Jimenez & Associates. All rights reserved.",
