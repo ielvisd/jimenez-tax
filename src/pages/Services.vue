@@ -30,7 +30,7 @@
                 </q-card-section>
 
                 <q-card-section class="col-5 flex flex-center">
-                  <q-img class="rounded-borders" src="https://cdn.quasar.dev/img/parallax2.jpg" />
+                  <q-img class="rounded-borders" src="../statics/taxes.jpg" />
                 </q-card-section>
               </q-card-section>
 
