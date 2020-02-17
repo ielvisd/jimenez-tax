@@ -7,7 +7,7 @@
             <div class="row auto-24btm test">
               <img class="test" alt="Jimenez Tax logo" src="~assets/jimenez-logo.svg" />
             </div>
-            <div class="row auto-24btm">
+            <div class="row auto-24btm flex-center">
               <q-img
                 class="auto"
                 :src="url"
