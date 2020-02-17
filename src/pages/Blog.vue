@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="posts">
     <main>
@@ -35,4 +33,3 @@ export default {
   }
 };
 </script>
-

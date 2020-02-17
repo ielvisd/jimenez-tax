@@ -3,11 +3,11 @@
     <q-header class="bg-secondary" elevated>
       <q-toolbar>
         <q-btn
+          @click="showDrift"
           class="absolute-right text-accent"
           flat
           icon="meeting_room"
-          label="Make an appointment"
-          to="/appointments"
+          label="Appointments"
         />
         <!-- <q-btn
           @click="logoutUser"
@@ -64,6 +64,22 @@
       </q-list>
     </q-drawer>
 
+    <q-dialog v-model="alert">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6">Chat with us!</div>
+        </q-card-section>
+
+        <q-card-section
+          class="q-pt-none"
+        >Click the chat circle on the lower right to make an appointment.</q-card-section>
+
+        <q-card-actions align="right">
+          <q-btn label="OK" color="secondary" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -71,13 +87,36 @@
 </template>
 
 <script>
+import { dom } from "quasar";
+const { ready } = dom;
+
 export default {
   name: "MainLayout",
+
+  mounted() {
+    ready(function() {
+      // ....
+      console.log("READY!");
+      console.log(
+        document.getElementsByClassName("drift-widget-controller-overlay")
+          .length
+      );
+      // this.showDrift();
+    });
+  },
+
+  methods: {
+    showDrift() {
+      this.$drift.show();
+      this.alert = true;
+    }
+  },
 
   components: {},
 
   data() {
     return {
+      alert: false,
       leftDrawerOpen: false,
       navs: [
         {
@@ -99,11 +138,6 @@ export default {
           label: "Blog",
           icon: "library_books",
           to: "/blog"
-        },
-        {
-          label: "Make an Appointment",
-          icon: "meeting_room",
-          to: "/appointments"
         },
         {
           label: "Contact Us",

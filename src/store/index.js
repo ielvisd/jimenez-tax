@@ -1,14 +1,10 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import VueDrift from "vue-drift";
 
 // import example from './module-example'
 import blog from "./store-blog";
 
 Vue.use(Vuex);
-Vue.use(VueDrift, {
-  appId: "4v2nvs8skwxf"
-});
 
 /*
  * If not building with SSR mode, you can
