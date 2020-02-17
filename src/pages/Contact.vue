@@ -91,7 +91,7 @@ export default {
     return {
       alert: false,
 
-      url: "../statics/services.jpg",
+      url: "../statics/hours.jpg",
       slide: "style",
       address: "Leo Jimenez & Associates </br>oijoj",
       footer: "Copyright © 2020 Leo Jimenez & Associates. All rights reserved.",
