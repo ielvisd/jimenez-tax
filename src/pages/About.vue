@@ -23,12 +23,12 @@
               <q-item>
                 <q-item-section avatar>
                   <q-avatar>
-                    <img src="../statics/diego.png" />
+                    <img :src="team.leo.picture" />
                   </q-avatar>
                 </q-item-section>
 
                 <q-item-section>
-                  <q-item-label>Diego Ortiz</q-item-label>
+                  <q-item-label>{{team.leo.name}}</q-item-label>
                   <q-item-label caption>Tax Preparer</q-item-label>
                 </q-item-section>
               </q-item>
@@ -58,12 +58,12 @@
               <q-item>
                 <q-item-section avatar>
                   <q-avatar>
-                    <img src="../statics/diego.png" />
+                    <img :src="team.susana.picture" />
                   </q-avatar>
                 </q-item-section>
 
                 <q-item-section>
-                  <q-item-label>Diego Ortiz</q-item-label>
+                  <q-item-label>{{team.susana.name}}</q-item-label>
                   <q-item-label caption>Tax Preparer</q-item-label>
                 </q-item-section>
               </q-item>
@@ -93,12 +93,12 @@
               <q-item>
                 <q-item-section avatar>
                   <q-avatar>
-                    <img src="../statics/diego.png" />
+                    <img :src="team.diego.picture" />
                   </q-avatar>
                 </q-item-section>
 
                 <q-item-section>
-                  <q-item-label>Diego Ortiz</q-item-label>
+                  <q-item-label>{{team.diego.name}}</q-item-label>
                   <q-item-label caption>Tax Preparer</q-item-label>
                 </q-item-section>
               </q-item>
@@ -128,12 +128,12 @@
               <q-item>
                 <q-item-section avatar>
                   <q-avatar>
-                    <img src="../statics/diego.png" />
+                    <img :src="team.emilio.picture" />
                   </q-avatar>
                 </q-item-section>
 
                 <q-item-section>
-                  <q-item-label>Diego Ortiz</q-item-label>
+                  <q-item-label>{{team.emilio.name}}</q-item-label>
                   <q-item-label caption>Tax Preparer</q-item-label>
                 </q-item-section>
               </q-item>
@@ -163,12 +163,12 @@
               <q-item>
                 <q-item-section avatar>
                   <q-avatar>
-                    <img src="../statics/diego.png" />
+                    <img :src="team.frank.picture" />
                   </q-avatar>
                 </q-item-section>
 
                 <q-item-section>
-                  <q-item-label>Diego Ortiz</q-item-label>
+                  <q-item-label>{{team.frank.name}}</q-item-label>
                   <q-item-label caption>Tax Preparer</q-item-label>
                 </q-item-section>
               </q-item>
@@ -198,12 +198,12 @@
               <q-item>
                 <q-item-section avatar>
                   <q-avatar>
-                    <img src="../statics/diego.png" />
+                    <img :src="team.lion6.picture" />
                   </q-avatar>
                 </q-item-section>
 
                 <q-item-section>
-                  <q-item-label>Diego Ortiz</q-item-label>
+                  <q-item-label>{{team.lion6.name}}</q-item-label>
                   <q-item-label caption>Tax Preparer</q-item-label>
                 </q-item-section>
               </q-item>
@@ -303,12 +303,47 @@ export default {
     return {
       alert: false,
       team: {
+        leo: {
+          name: "Leo Jimenez",
+          email: "jimtax@sbcglobal.net",
+          phone: "(213)-413-3313",
+          nationality: "USA",
+          picture: "../statics/lion1.jpg"
+        },
+        susana: {
+          name: "Susana Jimenez",
+          email: "jimtax@sbcglobal.net",
+          phone: "(213)-413-3313",
+          nationality: "USA",
+          picture: "../statics/susana.jpg"
+        },
         diego: {
           name: "Diego Ortiz",
           email: "dortiztax@gmail.com",
           phone: "(213)-413-3313",
           nationality: "USA",
           picture: "../statics/diego.png"
+        },
+        emilio: {
+          name: "Emilio Ortiz",
+          email: "jimtax@sbcglobal.net",
+          phone: "(213)-413-3313",
+          nationality: "USA",
+          picture: "../statics/lion2.jpg"
+        },
+        frank: {
+          name: "Frank",
+          email: "jimtax@sbcglobal.net",
+          phone: "(213)-413-3313",
+          nationality: "USA",
+          picture: "../statics/lion3.jpg"
+        },
+        lion6: {
+          name: "Tax Lion #6",
+          email: "jimtax@sbcglobal.net",
+          phone: "(213)-413-3313",
+          nationality: "USA",
+          picture: "../statics/lion4.jpg"
         }
       },
       url: "../statics/lions.jpg",
@@ -324,6 +359,11 @@ export default {
 
 
 <style lang="scss">
+.test {
+  width: fit-content;
+  max-width: 275px;
+}
+
 .avatar {
   width: 100px;
   height: 100px;

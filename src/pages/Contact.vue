@@ -110,10 +110,6 @@ export default {
   height: inherit;
 }
 
-.test {
-  width: fit-content;
-}
-
 .auto {
   margin: 0 auto;
 }
@@ -147,6 +143,11 @@ export default {
 
 .p-bottom-24 {
   padding-bottom: 24px;
+}
+
+.test {
+  width: fit-content;
+  max-width: 275px;
 }
 </style>
 

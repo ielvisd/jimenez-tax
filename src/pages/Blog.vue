@@ -146,10 +146,6 @@ export default {
   height: inherit;
 }
 
-.test {
-  width: fit-content;
-}
-
 .auto {
   margin: 0 auto;
 }
@@ -230,6 +226,11 @@ export default {
     margin: 0;
   }
   margin-right: 8px;
+}
+
+.test {
+  width: fit-content;
+  max-width: 275px;
 }
 </style>
 
